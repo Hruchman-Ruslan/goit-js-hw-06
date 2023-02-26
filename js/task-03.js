@@ -16,6 +16,8 @@ const images = [
 const listGalleryRef = document.querySelector(".gallery");
 listGalleryRef.style.display = "flex";
 
-const elementGallery = images.map(({ url, alt }) => `<li><img src='${url}' width="320" alt='${alt}'></li>`).join("");
+const handleElementGallery = images
+	.map(({ url, alt }) => `<li><img src='${url}' width="320" alt='${alt}'></li>`)
+	.join("");
 
-listGalleryRef.insertAdjacentHTML("afterbegin", elementGallery);
+listGalleryRef.insertAdjacentHTML("afterbegin", handleElementGallery);
